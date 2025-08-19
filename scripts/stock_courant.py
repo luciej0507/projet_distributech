@@ -1,6 +1,7 @@
 import mysql.connector
 import pandas as pd
 
+
 DB_HOST      = 'localhost'
 DB_ROOT      = 'root'
 DB_ROOT_PASSWORD = 'example'

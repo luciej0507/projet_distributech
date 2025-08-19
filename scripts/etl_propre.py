@@ -4,6 +4,8 @@ import pandas as pd
 import sqlite3
 import random
 import mysql.connector
+import schedule
+import time
 
 load_dotenv()
 
@@ -221,6 +223,12 @@ for row in new_df.itertuples(index = False):
         "INSERT INTO commandes_produits (produit, commande) VALUES (%s, %s)", (produit, commande)
     )
 
+# Commit et fermeture
+admin_cnx.commit()
+admin_cursor.close()
+admin_cnx.close()
+conn.close()
+
 
 # Fichier CSV de l'état des stocks par produit
 query_csv = """
@@ -235,9 +243,10 @@ df_csv_stocks = pd.read_sql(query_csv, admin_cnx)
 df_csv_stocks.to_csv("etat_stocks.csv", index=False, encoding="utf-8")
 print("Fichier 'etat_stocks.csv' généré avec succès.")
 
+# Automatisation de la génération du fichier CSV tous les lundis à 8h00
+schedule.every().monday.at("08:00").do(df_csv_stocks.to_csv("etat_stocks.csv", index=False, encoding="utf-8"), print("Fichier 'etat_stocks.csv' généré avec succès."))
 
-# Commit et fermeture
-admin_cnx.commit()
-admin_cursor.close()
-admin_cnx.close()
-conn.close()
+while True:
+    schedule.run_pending()
+    time.sleep(1)  # Pause pour éviter une boucle trop rapide
+
