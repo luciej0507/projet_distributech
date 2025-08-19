@@ -1,0 +1,11 @@
+id,nom_produit,stock_initial,nb_exemplaire,stock_courant
+101,Casque Bluetooth,50,5,45
+102,Chargeur USB-C,80,10,70
+103,Enceinte Portable,40,4,36
+104,Batterie Externe,60,0,60
+105,Montre Connectée,20,2,18
+106,Webcam HD,35,0,35
+107,Hub USB 3.0,25,0,25
+108,Clavier sans fil,30,3,27
+109,Souris ergonomique,45,0,45
+110,Station d'accueil,15,0,15

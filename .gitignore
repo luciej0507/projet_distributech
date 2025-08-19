@@ -1,0 +1,15 @@
+bdd
+.dtvenv
+*.env
+requirements.txt
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.egg
+*.egg-info/
+dist/
+build/                  
