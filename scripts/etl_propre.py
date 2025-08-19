@@ -236,9 +236,8 @@ df_csv_stocks.to_csv("etat_stocks.csv", index=False, encoding="utf-8")
 print("Fichier 'etat_stocks.csv' généré avec succès.")
 
 
-
 # Commit et fermeture
 admin_cnx.commit()
 admin_cursor.close()
 admin_cnx.close()
-# conn.close() : à mettre ou pas ?
+conn.close()
