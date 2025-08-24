@@ -20,7 +20,7 @@ Objectif : fournir une vision claire et à jour de l’état des stocks et de l�
 
 ---
 
-## Prérequis  
+## Pré-requis  
 - **Matériel** : PC classique (Windows, Linux, macOS) avec ≥ 5 Go libres et connexion internet stable.  
 - **Logiciel** :  
   - Python ≥ 3.12  
