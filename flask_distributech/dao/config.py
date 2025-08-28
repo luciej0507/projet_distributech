@@ -1,0 +1,5 @@
+BDD_USER = 'root'
+BDD_PASSWORD = 'example'
+BDD_HOST = 'localhost'
+BDD_PORT = '3306'
+BDD_DATABASE = 'distributech'

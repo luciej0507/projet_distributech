@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Projet Distributech</h1>
+    <p class="text-center">Bienvenue sur le site de gestion de stock Distributech !</p>
+    <p class="text-center">Utilisez le menu ci-dessus pour consulter le stock courant des produits.</p>
+</div>
+
+<!--
+<table>
+    <h1>Voici le stock courant :</h1>
+    <tr>
+        <th>Nom Produit</th>
+        <th>Stock initial</th>
+        <th>Nombre d'exemplaire commandé</th>
+        <th>Stock courant</th>
+    </tr>
+    {% for stock in stocks %}
+    <tr>
+        <td>{{ stock['nom_produit'] }}</td>
+        <td>{{ stock['stock_initial'] }}</td>
+        <td>{{ stock['nb_exemplaire'] }}</td>
+        <td>{{ stock['stock_courant'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+-->
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<!-- On hérite du template de base "base.html" pour garder le même style et menu -->
+
+{% block title %}Stock courant{% endblock %}
+
+{% block content %}
+<h1>Voici le stock courant pour chacun des produits:</h1>
+
+<!-- Tableau pour afficher les informations sur le stock courant-->
+<table class="table table-bordered table-hover">
+    <tr class="table-secondary">
+        <th>Nom Produit</th>
+        <th>Stock initial</th>
+        <th>Nombre d'exemplaires commandés</th>
+        <th>Stock courant</th>
+    </tr>
+    {% for stocks in stocks %}
+    <tr>
+        <td>{{ stocks['nom_produit'] }}</td> <!--Affiche le nom du produit-->
+        <td>{{ stocks['stock_initial'] }}</td> <!--Affiche le stock initial du produit-->
+        <td>{{ stocks['nb_exemplaire'] }}</td> <!--Affiche le nombre d'exemplaires commandés-->
+        <td>{{ stocks['stock_courant'] }}</td> <!--Affiche le stock courant après commandes-->
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
